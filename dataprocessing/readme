@@ -1,1 +1,2 @@
-
+transfer_x.py is used to process our own simulations.
+get_data.py is used to check for data duplication and null values, and to delete them.
