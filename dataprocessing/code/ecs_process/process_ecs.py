@@ -39,4 +39,3 @@ print(ecs_df[['date', 'ip', 'instance_id']].to_string())
 # 现在，`ecs_df` 就是您完成清洗后，可以用于后续匹配的最终表格。
 # 例如，您可以将它保存到新的CSV文件中：
 ecs_df.to_csv('ecs_shiyan.csv', index=False)
-
