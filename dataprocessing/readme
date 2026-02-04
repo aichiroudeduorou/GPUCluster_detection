@@ -1,2 +1,3 @@
 transfer_x.py is used to process our own simulations.
+align_multiple.py saves data from different instance_id as different files.
 get_data.py is used to check for data duplication and null values, and to delete them.
