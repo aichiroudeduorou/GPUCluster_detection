@@ -1,8 +1,8 @@
 # GPUCluster_detection
 
 ## ECS 数据清洗与预处理脚本
-/code/ecs_process/process_ecs.py
-/code/ecs_process/sort_unique_ecs.py
+/dataprocessing/ecs_process/process_ecs.py
+/dataprocessing/ecs_process/sort_unique_ecs.py
 
 对原始 ECS 故障数据执行两阶段清洗：  
 1. **字段修正**：针对 `date == 20260113` 的记录，将 `ip` 值移至 `instance_id`，并将原 `ip` 置为空（因该日数据中 `instance_id` 缺失而 `ip` 可用）。  
@@ -16,7 +16,7 @@
 
 
 ## GPU 与 ECS 数据对齐流水线
-/code/align_multiple align_multiple.py
+/dataprocessing/align_multiple align_multiple.py
 将 GPU 监控数据（`t2_*_masked.csv`、`t3_masked.csv`）与 ECS 故障记录按 `instance_id` 和时间戳（10 分钟窗口内）进行对齐。  
 - **核心功能**：  
   - 为非关键列自动添加前缀（例如 `temp` → `t2_temp`、`t3_temp`），避免列名冲突。  
